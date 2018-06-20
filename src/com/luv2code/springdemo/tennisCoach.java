@@ -8,11 +8,19 @@ public class tennisCoach implements Coach {
 	
 	private FortuneService fortuneService; 
 	
-	@Autowired
-	public tennisCoach( FortuneService thefortuneService ) {
-		this.fortuneService = thefortuneService;
+//	@Autowired
+//	public tennisCoach( FortuneService thefortuneService ) {
+//		this.fortuneService = thefortuneService;
+//	}
+	
+	public tennisCoach() {
+		System.out.println("17 - default constructor called in tennisCoach");
 	}
 	
+	@Autowired
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
 	
 	@Override
 	public String getDailyWorkout() {
@@ -26,5 +34,4 @@ public class tennisCoach implements Coach {
 		return fortuneService.getFortune(); 
 	}
 	
-
 }
