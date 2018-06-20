@@ -15,6 +15,8 @@ public class AnnotationDemoApp {
 			//call methods on the bean 
 		System.out.println("16-  theCoach" +  theCoach.getDailyWorkout() );
 		
+		System.out.println("18-  theCoach" +  theCoach.getDailyFortune() );
+		
 			//close container  thatSillyCoach
 		context.close();
 
